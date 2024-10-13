@@ -1,0 +1,24 @@
+[package]
+name = "time-sync-app"
+version = "0.1.0"
+description = "A Tauri App for time synchronization"
+authors = ["Your Name"]
+license = ""
+repository = ""
+default-run = "time-sync-app"
+edition = "2021"
+rust-version = "1.70"
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-alpha", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "2.0.0-alpha", features = [] }
+chrono = "0.4"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
